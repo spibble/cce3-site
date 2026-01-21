@@ -1,5 +1,4 @@
 module.exports = async function (config) {
-  const { HtmlBasePlugin } = await import("@11ty/eleventy");
 
   config.setBrowserSyncConfig({
 		files: './_site/css/**/*.css'
@@ -14,8 +13,6 @@ module.exports = async function (config) {
     });
     return markdown.render(value);
   });
-
-  config.addPlugin(HtmlBasePlugin);  
 
   return {
     markdownTemplateEngine: "njk",

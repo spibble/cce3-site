@@ -10,7 +10,7 @@
     "build:eleventy": "rm -rf dist && npx eleventy",
     "build:sass": "sass src/assets/scss/main.scss src/main.css",
     "build": "npm-run-all build:eleventy build:sass",
-    "build:gh-pages": "npm run build:sass && npx eleventy --pathprefix=cce3-site",
+    "build:gh-pages": "npm run build:sass && npx eleventy",
     "start": "npm-run-all build:sass --parallel watch:*",
     "clean": "rm -rf dist"
   },
